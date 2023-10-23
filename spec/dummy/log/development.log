@@ -1,0 +1,489 @@
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:16
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT GET_LOCK('1879511927242188015', 0)[0m
+  ↳ bin/rails:16
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:16
+Migrating to CreateFusionLeads (20221116192030)
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE `fusion_leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `source` varchar(255), `broker_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:3
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1879511927242188015')[0m
+  ↳ bin/rails:16
+  [1m[35m (5.9ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (286.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `fusion_test`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE DATABASE `fusion_dev` DEFAULT COLLATE `utf8mb4_general_ci`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `fusion_test` DEFAULT COLLATE `utf8mb4_general_ci`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (33.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) COLLATE utf8_general_ci NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) COLLATE utf8_general_ci NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT GET_LOCK('940183380618235110', 0)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to CreateFusionLeads (20221116192030)
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE `fusion_leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `source` varchar(255), `broker_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:3
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE  INDEX `index_fusion_leads_on_broker_id`  ON `fusion_leads` (`broker_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221116192030')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to CreateFusionOwners (20221201174319)
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE `fusion_owners` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `primary_guarantor` tinyint(1), `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone_mobile` varchar(255), `phone` varchar(255), `birthdate` date, `ssn` varchar(255), `owner_percent` varchar(255), `permalink` varchar(255), `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:3
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE  INDEX `index_fusion_owners_on_lead_id`  ON `fusion_owners` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174319')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to CreateFusionAddresses (20221201174447)
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE `fusion_addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `street_number` varchar(255), `street_name` varchar(255), `unit` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `addressable_type` varchar(255), `addressable_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174447_create_fusion_addresses.rb:3
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE  INDEX `index_on_addressable_columns`  ON `fusion_addresses` (`addressable_type`, `addressable_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174447_create_fusion_addresses.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174447')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to CreateFusionOffers (20221201174628)
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE `fusion_offers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `amount` varchar(255), `purpose` varchar(255), `description` varchar(255), `length_max` varchar(255), `pmt_frequency` varchar(255), `lead_id` bigint, `nucleus_offer_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:3
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE  INDEX `index_fusion_offers_on_lead_id`  ON `fusion_offers` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:14
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE  INDEX `index_fusion_offers_on_nucleus_offer_id`  ON `fusion_offers` (`nucleus_offer_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174628')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to CreateFusionDocuments (20221201174709)
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE `fusion_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `filename` varchar(255), `file_type` varchar(255), `file` varchar(255), `state` varchar(255), `size` varchar(255), `content_type` varchar(255), `offer_id` bigint, `uploaded_by` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174709_create_fusion_documents.rb:3
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE  INDEX `index_fusion_attachments_on_offer_id`  ON `fusion_attachments` (`offer_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174709_create_fusion_documents.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174709')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to CreateFusionCompanies (20221201191714)
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE `fusion_companies` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `legal_name` varchar(255), `incorporation_date` date, `ein` varchar(255), `phone_work` varchar(255), `email` varchar(255), `dba` varchar(255), `type_inc` varchar(255), `url` varchar(255), `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:3
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_lead_id`  ON `fusion_companies` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:17
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_ein`  ON `fusion_companies` (`ein`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201191714')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to EngineRun (20221222224442)
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE `fusion_engine_runs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `rules` json, `violations` json, `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221222224442_engine_run.rb:3
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE  INDEX `index_fusion_engine_runs_on_lead_id`  ON `fusion_engine_runs` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221222224442_engine_run.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221222224442')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to AddUsers (20230214201906)
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `login` varchar(255), `encrypted_cpr` varchar(255), `first_name` varchar(255), `created_on` datetime, `updated_on` datetime, `last_login` datetime, `created_by` varchar(255), `status` varchar(255), `last_name` varchar(255), `enabled` int, `salt` varchar(255), `remember_token` varchar(255), `password_reset_code` varchar(255), `activation_code` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `gender` varchar(255), `birthdate` datetime, `email` varchar(255), `email_confirmed` varchar(255), `phone` varchar(255), `phone_work` varchar(255), `lender_type` varchar(255), `description` text, `permalink` varchar(255), `type` varchar(255), `register_as` varchar(255), `phone_mobile` varchar(255), `middle_initial` varchar(255), `name_suffix` varchar(255), `parent_id` int, `annotations` text, `industry` varchar(255), `other_industry` varchar(255), `state_inc` varchar(255), `type_inc` varchar(255), `owner_since` datetime, `workflow_user` int, `workflow_state` varchar(255), `workflow_stage` varchar(255), `workflow_time` datetime, `from_broker_id` int, `from_broker_permalink` varchar(255), `workflow_urgency` int, `password_hash` varchar(255), `contact_person_name` varchar(255), `heard_from` varchar(255), `default_locale_id` int, `default_country_id` int, `broker_country_id` int, `industry_category` varchar(255), `encrypted_password` varchar(255), `failed_attempts` int, `unlock_token` varchar(255), `locked_at` datetime)[0m
+  ↳ db/migrate/20230214201906_add_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230214201906')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to AddAddresses (20230216154830)
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE `addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `civic` varchar(255), `street` varchar(255), `unit` varchar(255), `city` varchar(255), `province` varchar(255), `zip` varchar(255), `contact_name` varchar(255), `status` varchar(255), `created_at` varchar(255), `updated_at` varchar(255), `valid_from` varchar(255), `data` varchar(255), `type` varchar(255), `bank_id` int, `country_id` int)[0m
+  ↳ db/migrate/20230216154830_add_addresses.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230216154830')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+Migrating to AddOffers (20230216173113)
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE `offers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `title` varchar(255), `description` text, `created_on` datetime, `updated_on` datetime, `start_date` datetime, `end_date` datetime, `amount` decimal, `rate` decimal, `length_max` int, `contract_amount` decimal, `nonpay_status` int, `nonpay_date` datetime, `reserved_at` datetime, `requested_amount` decimal, `topic_id` int, `description_html` text, `permalink` varchar(255), `purpose` varchar(255), `payment_type` varchar(255), `bids_amount` decimal, `amount_nsf_unpaid` decimal, `loan_state` varchar(255), `offer_state` varchar(255), `ratio_di` decimal, `suggested_rate` decimal, `cached_state` varchar(255), `active_state` varchar(255), `score_bni` int, `score_vantage` int, `score_iou` int, `data` text, `late_status` varchar(255), `writeoff_status` varchar(255), `workflow_user` int, `workflow_state` varchar(255), `workflow_stage` varchar(255), `workflow_time` datetime, `accord_state` varchar(255), `opt_status` varchar(255), `workflow_urgency` int, `from_broker_id` int, `t0date` datetime, `workflow_importance` int, `activation_time` datetime, `loan_category` varchar(255), `current_lender_id` int, `cache` text, `from_broker_permalink` varchar(255), `workflow_processor_id` int, `workflow_underwriter_id` int, `legal_status` varchar(255), `legal_status_date` datetime, `cd_loan_amount` decimal, `cd_loan_term` int, `cd_loan_rate` decimal, `cd_preparation_date` datetime, `cd_loan_start_date` datetime, `cd_gfee_rate` decimal, `cd_closing_fee` decimal, `cd_regular_repayment_amount` decimal, `cd_payment_count` int, `cd_pay_date_first` date, `cd_pay_date_last` date, `cd_total_interest` decimal, `cd_interest_start_date` date, `cd_last_pay_amount` decimal, `cd_gfee_payment` decimal, `cd_gfee_total` decimal, `cd_payment_with_gfee` decimal, `cd_ratio_di` decimal, `cd_nsf_fee` decimal, `eligible_for_renewal` int, `eligible_for_renewal_in_days` int, `uw_amount_net` decimal, `estimated_closing_date` datetime, `loan_closing_invite` datetime, `state_of_loan` varchar(255), `promo_code_id` int, `promo_method` varchar(255), `channel` varchar(255), `primary_guarantor_id` int, `allow_accept_funding` int, `application_date` date, `contract_sold_date` datetime, `resolved_at` datetime, `uw_declared_as_renewal` int, `workflow_underwriter_date` datetime, `workflow_processor_date` datetime, `workflow_renewal_specialist_id` int, `workflow_renewal_specialist_date` datetime, `workflow_audited` int, `is_renewed` int, `is_renewal` int, `renew_from_id` int, `country_id` int, `has_lender_deposit_statements` int, `money_mart` int, `iou_score_value` int, `iou_score_letter` varchar(255), `renewal_status` varchar(255), `workflow_lead_originator_id` int, `renewal_type` varchar(255), `pmt_frequency` varchar(255), `workflow_lead_originator_date` datetime, `cd_payment_frequency` varchar(255), `payoff_received_from` varchar(255), `payoff_resolved` int, `payoff_request_processed` varchar(255), `payoff_request_type` varchar(255), `payoff_request_reason` varchar(255), `payoff_request_on` date, `payoff_request_amount` int, `collection_status` varchar(255), `sent_investor_referral` int, `investor_referral_id` int, `sent_investor_referral_on` datetime, `investor_reviewed_on` datetime, `investor_reviewal` int, `auto_change_payment_plan` int, `next_payment_plan` varchar(255), `investor_unreferred_on` datetime, `reage_no` int, `lien_position` varchar(255), `score_tier` varchar(255), `management_exception` int, `exception_by` int, `broker_contact_id` int, `eligible_for_renewal_with_balance` int, `workflow_closer_id` int, `workflow_closer_date` datetime, `cd_interest_method` int, `is_ecoa_notice_sent` int)[0m
+  ↳ db/migrate/20230216173113_add_offers.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230216173113')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-02-21 18:21:59', '2023-02-21 18:21:59')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('940183380618235110')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.5.1/bin/rake:25
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE `fusion_dev` DEFAULT COLLATE `utf8mb4_general_ci`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE `fusion_test` DEFAULT COLLATE `utf8mb4_general_ci`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('940183380618235110', 0)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionLeads (20221116192030)
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE `fusion_leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `source` varchar(255), `broker_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:3
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX `index_fusion_leads_on_broker_id`  ON `fusion_leads` (`broker_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221116192030')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionOwners (20221201174319)
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE `fusion_owners` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `primary_guarantor` tinyint(1), `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone_mobile` varchar(255), `phone` varchar(255), `birthdate` date, `ssn` varchar(255), `owner_percent` varchar(255), `permalink` varchar(255), `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX `index_fusion_owners_on_lead_id`  ON `fusion_owners` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:19
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174319')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionAddresses (20221201174447)
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `fusion_addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `street_number` varchar(255), `street_name` varchar(255), `unit` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `addressable_type` varchar(255), `addressable_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174447_create_fusion_addresses.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX `index_on_addressable_columns`  ON `fusion_addresses` (`addressable_type`, `addressable_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174447_create_fusion_addresses.rb:16
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174447')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionOffers (20221201174628)
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE `fusion_offers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `amount` varchar(255), `purpose` varchar(255), `description` varchar(255), `length_max` varchar(255), `pmt_frequency` varchar(255), `lead_id` bigint, `nucleus_offer_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX `index_fusion_offers_on_lead_id`  ON `fusion_offers` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:14
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX `index_fusion_offers_on_nucleus_offer_id`  ON `fusion_offers` (`nucleus_offer_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:15
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174628')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionAttachments (20221201174709)
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE `fusion_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `filename` varchar(255), `file_type` varchar(255), `file` varchar(255), `state` varchar(255), `size` varchar(255), `content_type` varchar(255), `lead_id` bigint, `uploaded_by` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174709_create_fusion_attachments.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX `index_fusion_attachments_on_lead_id`  ON `fusion_attachments` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174709_create_fusion_attachments.rb:15
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174709')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionCompanies (20221201191714)
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `fusion_companies` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `legal_name` varchar(255), `incorporation_date` date, `ein` varchar(255), `phone_work` varchar(255), `email` varchar(255), `dba` varchar(255), `type_inc` varchar(255), `url` varchar(255), `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_lead_id`  ON `fusion_companies` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:17
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_ein`  ON `fusion_companies` (`ein`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:18
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201191714')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to EngineRun (20221222224442)
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE `fusion_engine_runs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `rules` json, `violations` json, `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221222224442_engine_run.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX `index_fusion_engine_runs_on_lead_id`  ON `fusion_engine_runs` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221222224442_engine_run.rb:11
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221222224442')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddUsers (20230214201906)
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `login` varchar(255), `encrypted_cpr` varchar(255), `first_name` varchar(255), `created_on` datetime, `updated_on` datetime, `last_login` datetime, `created_by` varchar(255), `status` varchar(255), `last_name` varchar(255), `enabled` int, `salt` varchar(255), `remember_token` varchar(255), `password_reset_code` varchar(255), `activation_code` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `gender` varchar(255), `birthdate` datetime, `email` varchar(255), `email_confirmed` varchar(255), `phone` varchar(255), `phone_work` varchar(255), `lender_type` varchar(255), `description` text, `permalink` varchar(255), `type` varchar(255), `register_as` varchar(255), `phone_mobile` varchar(255), `middle_initial` varchar(255), `name_suffix` varchar(255), `parent_id` int, `annotations` text, `industry` varchar(255), `other_industry` varchar(255), `state_inc` varchar(255), `type_inc` varchar(255), `owner_since` datetime, `workflow_user` int, `workflow_state` varchar(255), `workflow_stage` varchar(255), `workflow_time` datetime, `from_broker_id` int, `from_broker_permalink` varchar(255), `workflow_urgency` int, `password_hash` varchar(255), `contact_person_name` varchar(255), `heard_from` varchar(255), `default_locale_id` int, `default_country_id` int, `broker_country_id` int, `industry_category` varchar(255), `encrypted_password` varchar(255), `failed_attempts` int, `unlock_token` varchar(255), `locked_at` datetime)[0m
+  ↳ db/migrate/20230214201906_add_users.rb:5
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230214201906')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddAddresses (20230216154830)
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `civic` varchar(255), `street` varchar(255), `unit` varchar(255), `city` varchar(255), `province` varchar(255), `zip` varchar(255), `contact_name` varchar(255), `status` varchar(255), `created_at` varchar(255), `updated_at` varchar(255), `valid_from` varchar(255), `data` varchar(255), `type` varchar(255), `bank_id` int, `country_id` int)[0m
+  ↳ db/migrate/20230216154830_add_addresses.rb:5
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230216154830')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddOffers (20230216173113)
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE `offers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `title` varchar(255), `description` text, `created_on` datetime, `updated_on` datetime, `start_date` datetime, `end_date` datetime, `amount` decimal, `rate` decimal, `length_max` int, `contract_amount` decimal, `nonpay_status` int, `nonpay_date` datetime, `reserved_at` datetime, `requested_amount` decimal, `topic_id` int, `description_html` text, `permalink` varchar(255), `purpose` varchar(255), `payment_type` varchar(255), `bids_amount` decimal, `amount_nsf_unpaid` decimal, `loan_state` varchar(255), `offer_state` varchar(255), `ratio_di` decimal, `suggested_rate` decimal, `cached_state` varchar(255), `active_state` varchar(255), `score_bni` int, `score_vantage` int, `score_iou` int, `data` text, `late_status` varchar(255), `writeoff_status` varchar(255), `workflow_user` int, `workflow_state` varchar(255), `workflow_stage` varchar(255), `workflow_time` datetime, `accord_state` varchar(255), `opt_status` varchar(255), `workflow_urgency` int, `from_broker_id` int, `t0date` datetime, `workflow_importance` int, `activation_time` datetime, `loan_category` varchar(255), `current_lender_id` int, `cache` text, `from_broker_permalink` varchar(255), `workflow_processor_id` int, `workflow_underwriter_id` int, `legal_status` varchar(255), `legal_status_date` datetime, `cd_loan_amount` decimal, `cd_loan_term` int, `cd_loan_rate` decimal, `cd_preparation_date` datetime, `cd_loan_start_date` datetime, `cd_gfee_rate` decimal, `cd_closing_fee` decimal, `cd_regular_repayment_amount` decimal, `cd_payment_count` int, `cd_pay_date_first` date, `cd_pay_date_last` date, `cd_total_interest` decimal, `cd_interest_start_date` date, `cd_last_pay_amount` decimal, `cd_gfee_payment` decimal, `cd_gfee_total` decimal, `cd_payment_with_gfee` decimal, `cd_ratio_di` decimal, `cd_nsf_fee` decimal, `eligible_for_renewal` int, `eligible_for_renewal_in_days` int, `uw_amount_net` decimal, `estimated_closing_date` datetime, `loan_closing_invite` datetime, `state_of_loan` varchar(255), `promo_code_id` int, `promo_method` varchar(255), `channel` varchar(255), `primary_guarantor_id` int, `allow_accept_funding` int, `application_date` date, `contract_sold_date` datetime, `resolved_at` datetime, `uw_declared_as_renewal` int, `workflow_underwriter_date` datetime, `workflow_processor_date` datetime, `workflow_renewal_specialist_id` int, `workflow_renewal_specialist_date` datetime, `workflow_audited` int, `is_renewed` int, `is_renewal` int, `renew_from_id` int, `country_id` int, `has_lender_deposit_statements` int, `money_mart` int, `iou_score_value` int, `iou_score_letter` varchar(255), `renewal_status` varchar(255), `workflow_lead_originator_id` int, `renewal_type` varchar(255), `pmt_frequency` varchar(255), `workflow_lead_originator_date` datetime, `cd_payment_frequency` varchar(255), `payoff_received_from` varchar(255), `payoff_resolved` int, `payoff_request_processed` varchar(255), `payoff_request_type` varchar(255), `payoff_request_reason` varchar(255), `payoff_request_on` date, `payoff_request_amount` int, `collection_status` varchar(255), `sent_investor_referral` int, `investor_referral_id` int, `sent_investor_referral_on` datetime, `investor_reviewed_on` datetime, `investor_reviewal` int, `auto_change_payment_plan` int, `next_payment_plan` varchar(255), `investor_unreferred_on` datetime, `reage_no` int, `lien_position` varchar(255), `score_tier` varchar(255), `management_exception` int, `exception_by` int, `broker_contact_id` int, `eligible_for_renewal_with_balance` int, `workflow_closer_id` int, `workflow_closer_date` datetime, `cd_interest_method` int, `is_ecoa_notice_sent` int)[0m
+  ↳ db/migrate/20230216173113_add_offers.rb:5
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230216173113')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-02-23 20:02:34', '2023-02-23 20:02:34')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('940183380618235110')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('940183380618235110', 0)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddAttachments (20230224195946)
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE `attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `created_on` datetime, `note` text, `user_id` int, `updated_on` datetime, `object_type` varchar(255), `object_id` int, `state` varchar(255), `deleted_on` datetime, `size` int, `content_type` varchar(255), `filename` varchar(255), `height` int, `width` int, `parent_id` int, `thumbnail` varchar(255), `type` varchar(255), `uploaded_by` int, `file` text)[0m
+  ↳ db/migrate/20230224195946_add_attachments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230224195946')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('940183380618235110')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (32.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `fusion_dev`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (18.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `fusion_test`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE DATABASE `fusion_dev` DEFAULT COLLATE `utf8mb4_general_ci`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE `fusion_test` DEFAULT COLLATE `utf8mb4_general_ci`[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('940183380618235110', 0)[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionLeads (20221116192030)
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE `fusion_leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `source` varchar(255), `broker_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:3
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE  INDEX `index_fusion_leads_on_broker_id`  ON `fusion_leads` (`broker_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221116192030_create_fusion_leads.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221116192030')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionOwners (20221201174319)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE `fusion_owners` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `primary_guarantor` tinyint(1), `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone_mobile` varchar(255), `phone` varchar(255), `birthdate` date, `ssn` varchar(255), `owner_percent` varchar(255), `permalink` varchar(255), `lead_id` bigint, `nucleus_user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:3
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX `index_fusion_owners_on_lead_id`  ON `fusion_owners` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:20
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX `index_fusion_owners_on_nucleus_user_id`  ON `fusion_owners` (`nucleus_user_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174319_create_fusion_owners.rb:21
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174319')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionAddresses (20221201174447)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE `fusion_addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `street_number` varchar(255), `street_name` varchar(255), `unit` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `addressable_type` varchar(255), `addressable_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174447_create_fusion_addresses.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX `index_on_addressable_columns`  ON `fusion_addresses` (`addressable_type`, `addressable_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174447_create_fusion_addresses.rb:16
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174447')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionOffers (20221201174628)
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE `fusion_offers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `amount` varchar(255), `purpose` varchar(255), `description` varchar(255), `length_max` varchar(255), `pmt_frequency` varchar(255), `lead_id` bigint, `nucleus_offer_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX `index_fusion_offers_on_lead_id`  ON `fusion_offers` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:14
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX `index_fusion_offers_on_nucleus_offer_id`  ON `fusion_offers` (`nucleus_offer_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174628_create_fusion_offers.rb:15
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174628')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionAttachments (20221201174709)
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE `fusion_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `filename` varchar(255), `file_type` varchar(255), `file` varchar(255), `state` varchar(255), `size` varchar(255), `content_type` varchar(255), `offer_id` bigint, `uploaded_by` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174709_create_fusion_attachments.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX `index_fusion_attachments_on_offer_id`  ON `fusion_attachments` (`offer_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201174709_create_fusion_attachments.rb:15
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201174709')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to CreateFusionCompanies (20221201191714)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE `fusion_companies` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `legal_name` varchar(255), `incorporation_date` date, `ein` varchar(255), `phone_work` varchar(255), `email` varchar(255), `dba` varchar(255), `type_inc` varchar(255), `url` varchar(255), `lead_id` bigint, `nucleus_company_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_lead_id`  ON `fusion_companies` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:18
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_ein`  ON `fusion_companies` (`ein`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:19
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX `index_fusion_companies_on_nucleus_company_id`  ON `fusion_companies` (`nucleus_company_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221201191714_create_fusion_companies.rb:20
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221201191714')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to EngineRun (20221222224442)
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE `fusion_engine_runs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `rules` json, `violations` json, `lead_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221222224442_engine_run.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX `index_fusion_engine_runs_on_lead_id`  ON `fusion_engine_runs` (`lead_id`) [0m
+  ↳ /Users/sergiobayona/Code/ioufinancial/fusion/db/migrate/20221222224442_engine_run.rb:11
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221222224442')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddUsers (20230214201906)
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `login` varchar(255), `encrypted_cpr` varchar(255), `first_name` varchar(255), `created_on` datetime, `updated_on` datetime, `last_login` datetime, `created_by` varchar(255), `status` varchar(255), `last_name` varchar(255), `enabled` int, `salt` varchar(255), `remember_token` varchar(255), `password_reset_code` varchar(255), `activation_code` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `gender` varchar(255), `birthdate` datetime, `email` varchar(255), `email_confirmed` varchar(255), `phone` varchar(255), `phone_work` varchar(255), `lender_type` varchar(255), `description` text, `permalink` varchar(255), `type` varchar(255), `register_as` varchar(255), `phone_mobile` varchar(255), `middle_initial` varchar(255), `name_suffix` varchar(255), `parent_id` int, `annotations` text, `industry` varchar(255), `other_industry` varchar(255), `state_inc` varchar(255), `type_inc` varchar(255), `owner_since` datetime, `workflow_user` int, `workflow_state` varchar(255), `workflow_stage` varchar(255), `workflow_time` datetime, `from_broker_id` int, `from_broker_permalink` varchar(255), `workflow_urgency` int, `password_hash` varchar(255), `contact_person_name` varchar(255), `heard_from` varchar(255), `default_locale_id` int, `default_country_id` int, `broker_country_id` int, `industry_category` varchar(255), `encrypted_password` varchar(255), `failed_attempts` int, `unlock_token` varchar(255), `locked_at` datetime)[0m
+  ↳ db/migrate/20230214201906_add_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230214201906')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddAddresses (20230216154830)
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `civic` varchar(255), `street` varchar(255), `unit` varchar(255), `city` varchar(255), `province` varchar(255), `zip` varchar(255), `contact_name` varchar(255), `status` varchar(255), `created_at` varchar(255), `updated_at` varchar(255), `valid_from` varchar(255), `data` varchar(255), `type` varchar(255), `bank_id` int, `country_id` int)[0m
+  ↳ db/migrate/20230216154830_add_addresses.rb:5
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230216154830')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddOffers (20230216173113)
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE `offers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `title` varchar(255), `description` text, `created_on` datetime, `updated_on` datetime, `start_date` datetime, `end_date` datetime, `amount` decimal, `rate` decimal, `length_max` int, `contract_amount` decimal, `nonpay_status` int, `nonpay_date` datetime, `reserved_at` datetime, `requested_amount` decimal, `topic_id` int, `description_html` text, `permalink` varchar(255), `purpose` varchar(255), `payment_type` varchar(255), `bids_amount` decimal, `amount_nsf_unpaid` decimal, `loan_state` varchar(255), `offer_state` varchar(255), `ratio_di` decimal, `suggested_rate` decimal, `cached_state` varchar(255), `active_state` varchar(255), `score_bni` int, `score_vantage` int, `score_iou` int, `data` text, `late_status` varchar(255), `writeoff_status` varchar(255), `workflow_user` int, `workflow_state` varchar(255), `workflow_stage` varchar(255), `workflow_time` datetime, `accord_state` varchar(255), `opt_status` varchar(255), `workflow_urgency` int, `from_broker_id` int, `t0date` datetime, `workflow_importance` int, `activation_time` datetime, `loan_category` varchar(255), `current_lender_id` int, `cache` text, `from_broker_permalink` varchar(255), `workflow_processor_id` int, `workflow_underwriter_id` int, `legal_status` varchar(255), `legal_status_date` datetime, `cd_loan_amount` decimal, `cd_loan_term` int, `cd_loan_rate` decimal, `cd_preparation_date` datetime, `cd_loan_start_date` datetime, `cd_gfee_rate` decimal, `cd_closing_fee` decimal, `cd_regular_repayment_amount` decimal, `cd_payment_count` int, `cd_pay_date_first` date, `cd_pay_date_last` date, `cd_total_interest` decimal, `cd_interest_start_date` date, `cd_last_pay_amount` decimal, `cd_gfee_payment` decimal, `cd_gfee_total` decimal, `cd_payment_with_gfee` decimal, `cd_ratio_di` decimal, `cd_nsf_fee` decimal, `eligible_for_renewal` int, `eligible_for_renewal_in_days` int, `uw_amount_net` decimal, `estimated_closing_date` datetime, `loan_closing_invite` datetime, `state_of_loan` varchar(255), `promo_code_id` int, `promo_method` varchar(255), `channel` varchar(255), `primary_guarantor_id` int, `allow_accept_funding` int, `application_date` date, `contract_sold_date` datetime, `resolved_at` datetime, `uw_declared_as_renewal` int, `workflow_underwriter_date` datetime, `workflow_processor_date` datetime, `workflow_renewal_specialist_id` int, `workflow_renewal_specialist_date` datetime, `workflow_audited` int, `is_renewed` int, `is_renewal` int, `renew_from_id` int, `country_id` int, `has_lender_deposit_statements` int, `money_mart` int, `iou_score_value` int, `iou_score_letter` varchar(255), `renewal_status` varchar(255), `workflow_lead_originator_id` int, `renewal_type` varchar(255), `pmt_frequency` varchar(255), `workflow_lead_originator_date` datetime, `cd_payment_frequency` varchar(255), `payoff_received_from` varchar(255), `payoff_resolved` int, `payoff_request_processed` varchar(255), `payoff_request_type` varchar(255), `payoff_request_reason` varchar(255), `payoff_request_on` date, `payoff_request_amount` int, `collection_status` varchar(255), `sent_investor_referral` int, `investor_referral_id` int, `sent_investor_referral_on` datetime, `investor_reviewed_on` datetime, `investor_reviewal` int, `auto_change_payment_plan` int, `next_payment_plan` varchar(255), `investor_unreferred_on` datetime, `reage_no` int, `lien_position` varchar(255), `score_tier` varchar(255), `management_exception` int, `exception_by` int, `broker_contact_id` int, `eligible_for_renewal_with_balance` int, `workflow_closer_id` int, `workflow_closer_date` datetime, `cd_interest_method` int, `is_ecoa_notice_sent` int)[0m
+  ↳ db/migrate/20230216173113_add_offers.rb:5
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230216173113')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+Migrating to AddAttachments (20230224195946)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE `attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `created_on` datetime, `note` text, `user_id` int, `updated_on` datetime, `object_type` varchar(255), `object_id` int, `state` varchar(255), `deleted_on` datetime, `size` int, `content_type` varchar(255), `filename` varchar(255), `height` int, `width` int, `parent_id` int, `thumbnail` varchar(255), `type` varchar(255), `uploaded_by` int, `file` text)[0m
+  ↳ db/migrate/20230224195946_add_attachments.rb:3
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230224195946')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-03-02 19:21:03', '2023-03-02 19:21:03')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('940183380618235110')[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sergiobayona/.rvm/gems/ruby-2.7.5/bin/rake:23
